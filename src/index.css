@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1B2A4A;
+  --color-white: #FFFFFF;
+  --color-gold: #F5A623;
+  --color-slate: #6B7280;
+  --color-teal: #2E8B9A;
+  --color-pink: #F5C6D6;
+  --color-blue: #B8D9F0;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-navy);
+  background-color: var(--color-white);
+}
+
+/* Kill harsh browser outline; replace with a clear gold focus ring site-wide. */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* Form controls already carry a custom focus glow — keep ring off to avoid double rings. */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 6px);
+  }
+}
+
+.hero-scroll-cue {
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-bounce 1.5s ease-in-out infinite;
+}
+
+/* Hero journey icons — high-resolution gold PNGs for smooth edges */
+.icon-cycle-stage {
+  height: 88%;
+  width: 88%;
+  max-height: 22rem;
+  max-width: 22rem;
+}
+
+.icon-cycle-glyph {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: auto;
+  filter: drop-shadow(0 10px 28px rgba(245, 166, 35, 0.22));
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.program-accent {
+  transition: filter 150ms ease-out;
+}
+
+.program-card:hover .program-accent {
+  filter: brightness(1.18) saturate(1.1);
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes chapter-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+.chapter-pulse {
+  animation: chapter-pulse 2.3s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-cue,
+  .chapter-pulse {
+    animation: none !important;
+  }
+
+  .hero-scroll-cue {
+    transform: translateX(-50%);
+  }
+
+  .animate-pulse {
+    animation: none !important;
+  }
+
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  .post-it {
+    transform: none !important;
+  }
+}
+
+/* Support page — bulletin board + post-it notes */
+.post-it-board {
+  background-color: #e5f0f8;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(27, 42, 74, 0.07) 1px, transparent 0);
+  background-size: 18px 18px;
+  box-shadow: inset 0 0 0 1px rgba(27, 42, 74, 0.06);
+}
+
+.post-it {
+  position: relative;
+  padding: 1.25rem 1.35rem 1.35rem;
+  border-radius: 2px;
+  box-shadow:
+    1px 2px 0 rgba(27, 42, 74, 0.04),
+    2px 5px 14px rgba(27, 42, 74, 0.12);
+}
+
+.post-it::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 52px;
+  height: 16px;
+  transform: translateX(-50%) rotate(-1deg);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 1px 2px rgba(27, 42, 74, 0.08);
+  opacity: 0.85;
+}
+
+.post-it-gold {
+  background: linear-gradient(160deg, #fde9a8 0%, #f5c04a 48%, #f5a623 100%);
+}
+
+.post-it-blue {
+  background: linear-gradient(160deg, #eef6fc 0%, #c5dff2 55%, #b8d9f0 100%);
+}
+
+.post-it-teal {
+  background: linear-gradient(160deg, #d4f4f8 0%, #9ee4ed 52%, #6ecfd9 100%);
+}
+
+.post-it-pink {
+  background: linear-gradient(160deg, #fde8f0 0%, #f5c6d6 52%, #eeb8cc 100%);
+}
+
+.post-it-navy {
+  background: linear-gradient(160deg, #2f456e 0%, #1b2a4a 100%);
+}
+
+.post-it-navy::before {
+  background: rgba(245, 166, 35, 0.35);
+}
+
+.post-it-tilt-left {
+  transform: rotate(-2.5deg);
+}
+
+.post-it-tilt-right {
+  transform: rotate(2.5deg);
+}

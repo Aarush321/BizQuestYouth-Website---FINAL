@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# React Router is a client-side SPA. Send all paths to index.html
+# so /chapters, /leadership, etc. work on refresh and direct visits.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
