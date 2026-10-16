@@ -19,7 +19,7 @@ const WAYS: Way[] = [
   {
     emoji: '💡',
     title: 'Sponsor a project',
-    body: 'Pay for a chapter project that helps a local business or nonprofit.',
+    body: 'Pay for a chapter project that helps a local business or community group.',
     variant: 'blue',
     tilt: 'right',
   },

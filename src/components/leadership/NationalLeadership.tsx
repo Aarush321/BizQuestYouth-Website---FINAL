@@ -18,13 +18,13 @@ type Leader = {
 const LEADERS: Leader[] = [
   {
     name: 'Aarush Ravichandran',
-    title: 'Co-Founder - Chief Executive Officer',
+    title: 'Co-Founder & Chief Executive Officer',
     imageUrl: aarushImg,
     imagePosition: 'left 12%',
   },
   {
     name: 'Uthej Katikaneni',
-    title: 'Co-Founder - Chief Financial Officer',
+    title: 'Co-Founder & Chief Financial Officer',
     imageUrl: uthejImg,
     imagePosition: 'center 55%',
   },
@@ -61,8 +61,12 @@ export default function NationalLeadership() {
         <div className="max-w-2xl">
           <SectionEyebrow>Our team</SectionEyebrow>
           <h1 className="mt-3 font-display text-3xl font-bold leading-tight text-navy md:text-[2.75rem]">
-            The people running BizQuest.
+            The people running BizQuest Youth.
           </h1>
+          <p className="mt-4 font-body text-base leading-relaxed text-slate md:text-lg">
+            BizQuest Youth was started in April 2025 by Aarush Ravichandran
+            (CEO) and Uthej Katikaneni (CFO).
+          </p>
         </div>
 
         <ul className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
@@ -73,7 +77,7 @@ export default function NationalLeadership() {
                   {leader.imageUrl ? (
                     <img
                       src={leader.imageUrl}
-                      alt={leader.name}
+                      alt={`${leader.name}, ${leader.title} of BizQuest Youth`}
                       className={`h-full w-full ${
                         leader.imageFit === 'contain'
                           ? 'object-contain'

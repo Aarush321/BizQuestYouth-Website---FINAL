@@ -1,0 +1,34 @@
+{
+  "url": "https://bizquestyouth.org",
+  "defaultDescription": "BizQuest Youth is a student-run organization that teaches coding, business, and AI, with chapters in Tennessee, New Jersey, and Delhi, India.",
+  "pages": {
+    "/": {
+      "title": "BizQuest Youth",
+      "description": "BizQuest Youth is a student-run organization that teaches coding, business, and AI, with chapters in Tennessee, New Jersey, and Delhi, India."
+    },
+    "/fundraise": {
+      "title": "Support Us | BizQuest Youth",
+      "description": "Ways to help BizQuest Youth: donate, sponsor a project, mentor students, or work with us as a local business."
+    },
+    "/chapters": {
+      "title": "Chapters | BizQuest Youth",
+      "description": "See where BizQuest Youth chapters meet and how to start one in your area."
+    },
+    "/leadership": {
+      "title": "Leadership | BizQuest Youth",
+      "description": "BizQuest Youth was co-founded by Aarush Ravichandran (CEO) and Uthej Katikaneni (CFO). The team also includes Kushagra Dixit (COO), Navneeth Manoj (Chief Growth Officer), Avaneesh Chandran (CMO), and Shreyan Seth (CTO)."
+    },
+    "/connect": {
+      "title": "Connect | BizQuest Youth",
+      "description": "Contact BizQuest Youth about joining, donating, partnering, or starting a chapter."
+    }
+  },
+  "leaders": [
+    { "name": "Aarush Ravichandran", "title": "Co-Founder & Chief Executive Officer" },
+    { "name": "Uthej Katikaneni", "title": "Co-Founder & Chief Financial Officer" },
+    { "name": "Kushagra Dixit", "title": "Chief Operations Officer" },
+    { "name": "Navneeth Manoj", "title": "Chief Growth Officer" },
+    { "name": "Avaneesh Chandran", "title": "Chief Marketing Officer" },
+    { "name": "Shreyan Seth", "title": "Chief Technology Officer" }
+  ]
+}

@@ -12,7 +12,7 @@ export default function FundraiseIntro() {
           Your gift funds what student innovators need most: materials and
           supplies for chapters, access to AI tools and software, mentor and
           training support, and the project resources that help teams ship
-          solutions for local businesses, nonprofits, and schools.
+          solutions for local businesses, community groups, and schools.
         </p>
       </div>
     </section>

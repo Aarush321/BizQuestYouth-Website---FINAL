@@ -28,7 +28,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-[500px] font-body text-base leading-relaxed text-slate md:text-xl md:leading-relaxed">
-              BizQuest is a student-run nonprofit. Our chapters meet to learn
+              BizQuest Youth is a student-run organization. Our chapters meet to learn
               coding, business, and AI, then use what they learn on projects
               for people in their own neighborhoods.
             </p>

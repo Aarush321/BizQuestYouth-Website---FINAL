@@ -25,7 +25,7 @@ export default function Footer() {
               <img src={logoLight} alt="BizQuest" className="h-9 w-auto" />
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-white/70">
-              A student-run nonprofit teaching coding, business, and AI.
+              A student-run organization teaching coding, business, and AI.
               Started in April 2025.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function Footer() {
       <div className="border-t border-white/15">
         <div className="mx-auto flex max-w-6xl px-5 py-4 md:px-8">
           <p className="font-mono text-xs text-white/45">
-            © {new Date().getFullYear()} BizQuest. All rights reserved.
+            © {new Date().getFullYear()} BizQuest Youth. All rights reserved.
           </p>
         </div>
       </div>

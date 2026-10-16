@@ -122,7 +122,7 @@ const PROGRAMS: Program[] = [
   },
   {
     title: 'Community Projects',
-    body: 'When we can, projects are for a local business, nonprofit, or school, so the work gets used.',
+    body: 'When we can, projects are for a local business, community group, or school, so the work gets used.',
     icon: <CommunityIcon />,
   },
 ]
