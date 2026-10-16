@@ -59,9 +59,9 @@ export default function NationalLeadership() {
     <section className="bg-white px-5 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <SectionEyebrow>Our Founders</SectionEyebrow>
+          <SectionEyebrow>Our team</SectionEyebrow>
           <h1 className="mt-3 font-display text-3xl font-bold leading-tight text-navy md:text-[2.75rem]">
-            Meet the Team Behind BizQuest.
+            The people running BizQuest.
           </h1>
         </div>
 

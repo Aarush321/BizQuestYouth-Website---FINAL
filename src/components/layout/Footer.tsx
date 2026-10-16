@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import logoLight from '../../assets/logo-light.png'
-import SocialIconLinks from './SocialIconLinks'
 
 const QUICK_LINKS = [
   { to: '/', label: 'Home' },
@@ -11,7 +10,7 @@ const QUICK_LINKS = [
 ] as const
 
 const GET_INVOLVED = [
-  { to: '/fundraise', label: 'Reach Out to Support' },
+  { to: '/fundraise', label: 'Support Us' },
   { to: '/chapters', label: 'Start a Chapter' },
   { to: '/connect', label: 'Volunteer' },
 ] as const
@@ -26,7 +25,7 @@ export default function Footer() {
               <img src={logoLight} alt="BizQuest" className="h-9 w-auto" />
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-white/70">
-              Empowering Young Innovators through AI
+              A student-run nonprofit teaching coding, business, and AI.
             </p>
           </div>
 
@@ -92,8 +91,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        <SocialIconLinks className="mt-10 flex items-center gap-4" />
       </div>
 
       <div className="border-t border-white/15">

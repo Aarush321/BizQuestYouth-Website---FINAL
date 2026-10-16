@@ -1,9 +1,9 @@
 import Hero from '../components/home/Hero'
 import MissionStrip from '../components/home/MissionStrip'
 import StatsBand from '../components/home/StatsBand'
+import WhyWeRaise from '../components/home/WhyWeRaise'
 import ProgramsPreview from '../components/home/ProgramsPreview'
 import Slideshow from '../components/home/Slideshow'
-import FeaturedStory from '../components/home/FeaturedStory'
 import CtaBanner from '../components/home/CtaBanner'
 
 export default function Home() {
@@ -12,9 +12,9 @@ export default function Home() {
       <Hero />
       <MissionStrip />
       <StatsBand />
+      <WhyWeRaise />
       <ProgramsPreview />
       <Slideshow />
-      <FeaturedStory />
       <CtaBanner />
     </div>
   )

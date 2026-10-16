@@ -50,8 +50,8 @@ export default function ContactInfo() {
         Get in Touch
       </h1>
       <p className="mt-4 max-w-md font-body text-base leading-relaxed text-slate">
-        Reach out anytime — whether you&rsquo;re a student, donor, or partner,
-        we&rsquo;d like to hear from you.
+        Questions, ideas, or want to get involved? Send us a message or email
+        us directly.
       </p>
 
       <ul className="mt-10 space-y-5">

@@ -12,6 +12,7 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --font-hand: "Caveat", cursive;
 }
 
 html {
@@ -133,6 +134,18 @@ select:focus-visible {
   .post-it {
     transform: none !important;
   }
+}
+
+/* Home slideshow — tape strips holding the photo frame */
+.slideshow-tape {
+  position: absolute;
+  top: -12px;
+  z-index: 10;
+  width: 88px;
+  height: 26px;
+  border-radius: 2px;
+  background: rgba(245, 166, 35, 0.55);
+  box-shadow: 0 1px 3px rgba(27, 42, 74, 0.12);
 }
 
 /* Support page — bulletin board + post-it notes */

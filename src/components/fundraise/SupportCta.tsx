@@ -11,19 +11,18 @@ export default function SupportCta() {
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
         <div className="post-it post-it-pink post-it-tilt-right max-w-sm px-6 py-5">
           <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-navy/60">
-            Let&rsquo;s build together
+            Got an idea?
           </p>
           <p className="mt-2 font-display text-xl font-semibold leading-snug text-navy">
-            Bring the idea. We&rsquo;ll bring the team.
+            Tell us. We&rsquo;ll find students who want to work on it.
           </p>
         </div>
 
         <h2 className="mt-8 font-display text-3xl font-bold leading-tight text-navy md:text-[2.75rem]">
-          Ready to support our mission?
+          Want to talk?
         </h2>
         <p className="mt-4 max-w-xl font-body text-base leading-relaxed text-navy/80 md:text-lg">
-          Partner with us, sponsor a project, or help fund IT access for
-          underserved students and businesses. We&rsquo;d love to hear from you.
+          Send us a message and tell us what you have in mind.
         </p>
         <Link
           to="/connect"

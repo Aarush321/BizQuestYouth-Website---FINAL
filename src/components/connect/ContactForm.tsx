@@ -111,7 +111,7 @@ export default function ContactForm() {
       setSubmitted(true)
     } catch {
       setSubmitError(
-        'Something went wrong sending your message. Please email contactbizquest@gmail.com or try again.',
+        'Your message didn’t go through. Try again, or email us at contactbizquest@gmail.com.',
       )
     } finally {
       setSubmitting(false)
@@ -126,11 +126,10 @@ export default function ContactForm() {
         aria-live="polite"
       >
         <p className="font-display text-lg font-semibold text-white">
-          Thanks — we&rsquo;ll be in touch soon.
+          Thanks, we got your message.
         </p>
         <p className="mt-2 font-body text-sm leading-relaxed text-white/70">
-          Your message has been received. A BizQuest teammate will follow up
-          shortly.
+          Someone from BizQuest will get back to you soon.
         </p>
       </div>
     )

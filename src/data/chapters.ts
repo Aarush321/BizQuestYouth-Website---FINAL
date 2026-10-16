@@ -22,7 +22,7 @@ export const CHAPTERS: Chapter[] = [
     city: 'Memphis, TN',
     lat: 35.149,
     lng: -90.049,
-    studentCount: 84,
+    studentCount: 209,
     featured: true,
     leaders: [
       { name: 'Jordan Blake', role: 'Chapter Lead', imageUrl: null },
@@ -35,6 +35,7 @@ export const CHAPTERS: Chapter[] = [
     city: 'Houston, TN',
     lat: 36.326,
     lng: -87.671,
+    studentCount: 118,
     leaders: [],
   },
   {
@@ -42,13 +43,15 @@ export const CHAPTERS: Chapter[] = [
     city: 'New Jersey',
     lat: 40.058,
     lng: -74.406,
+    studentCount: 97,
     leaders: [],
   },
   {
-    name: 'BizQuest India',
-    city: 'India',
-    lat: 20.594,
-    lng: 78.963,
+    name: 'BizQuest Delhi',
+    city: 'Delhi, India',
+    lat: 28.614,
+    lng: 77.209,
+    studentCount: 88,
     leaders: [],
   },
 ]

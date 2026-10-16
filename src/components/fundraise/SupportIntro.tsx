@@ -17,12 +17,12 @@ export default function SupportIntro() {
         <div>
           <SectionEyebrow>Reach out to support</SectionEyebrow>
           <h1 className="mt-4 font-display text-[2rem] font-bold leading-[1.08] text-navy sm:text-4xl lg:text-[2.85rem]">
-            We collaborate, fundraise, and build real solutions together.
+            Want to help out?
           </h1>
           <p className="mt-5 max-w-xl font-body text-base leading-relaxed text-slate md:text-lg">
-            BizQuest isn&rsquo;t just about raising money — it&rsquo;s about
-            partnering with local businesses, lifting up underserved businesses,
-            and opening IT pathways for underserved students and communities.
+            We raise money for laptops, software, and events. We also team up
+            with local businesses that could use some help with their tech. If
+            either of those sounds like you, reach out.
           </p>
           <Link
             to="/connect"
@@ -36,24 +36,23 @@ export default function SupportIntro() {
           <div className="post-it-board rounded-2xl p-6 md:p-8">
             <div className="post-it post-it-gold post-it-tilt-left mx-auto max-w-[15rem]">
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-navy/70">
-                Our why
+                Why we do this
               </p>
               <p className="mt-2 font-display text-lg font-semibold leading-snug text-navy">
-                Access, not luck.
+                Plenty of kids have ideas.
               </p>
               <p className="mt-2 font-body text-sm leading-relaxed text-navy/85">
-                Too many students never build something of their own — not for
-                lack of ideas, but for lack of access.
+                Fewer have a laptop, decent internet, and someone to show them
+                where to start.
               </p>
             </div>
 
             <div className="post-it post-it-pink post-it-tilt-right mt-6 ml-auto max-w-[14rem]">
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-navy/70">
-                Youth-led
+                Student-run
               </p>
               <p className="mt-2 font-body text-sm leading-relaxed text-navy">
-                Built by students, for students — and the communities around
-                them.
+                Every chapter is run by students. So is the national team.
               </p>
             </div>
           </div>

@@ -12,42 +12,42 @@ const WAYS: Way[] = [
   {
     emoji: '🤝',
     title: 'Partner as a business',
-    body: 'Bring us a real problem — students will collaborate with you to build a solution.',
+    body: 'Got a tech problem at your business? A student team can work on it with you.',
     variant: 'gold',
     tilt: 'left',
   },
   {
     emoji: '💡',
     title: 'Sponsor a project',
-    body: 'Fund a chapter project that helps an underserved business or community partner.',
+    body: 'Pay for a chapter project that helps a local business or nonprofit.',
     variant: 'blue',
     tilt: 'right',
   },
   {
     emoji: '💻',
-    title: 'Fund IT access',
-    body: 'Help us buy laptops, software, and AI tools for students who need them most.',
+    title: 'Pay for a laptop',
+    body: 'Help us buy laptops and software for students who don’t have them.',
     variant: 'pink',
     tilt: 'right',
   },
   {
     emoji: '🎯',
     title: 'Host a fundraiser',
-    body: 'Bake sales, coding-a-thons, pitch nights — chapters raise money their way.',
+    body: 'A bake sale, a pitch night, whatever works where you are. Send what you raise our way.',
     variant: 'gold',
     tilt: 'left',
   },
   {
     emoji: '🧑‍🏫',
     title: 'Mentor a team',
-    body: 'Share your expertise in tech, business, or design with student innovators.',
+    body: 'If you know tech, business, or design, come talk to a chapter.',
     variant: 'blue',
     tilt: 'right',
   },
   {
     emoji: '✉️',
-    title: 'Reach out directly',
-    body: 'Not sure where you fit? Tell us what you want to support — we’ll match you.',
+    title: 'Just message us',
+    body: 'Not sure where you fit? Tell us what you’re thinking and we’ll figure it out.',
     variant: 'teal',
     tilt: 'left',
   },
@@ -68,12 +68,11 @@ export default function WaysToSupport() {
           Ways to get involved
         </p>
         <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-4xl">
-          Pick a post-it. Start collaborating.
+          Pick a post-it.
         </h2>
         <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-white/75">
-          Whether you&rsquo;re a local business, donor, mentor, or community
-          member — there&rsquo;s a way to support underserved entrepreneurs and
-          the next generation in IT.
+          Go with whichever one fits you. If none of them do, message us
+          anyway.
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">

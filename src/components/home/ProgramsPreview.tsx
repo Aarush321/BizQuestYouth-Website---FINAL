@@ -107,22 +107,22 @@ function CommunityIcon() {
 const PROGRAMS: Program[] = [
   {
     title: 'Coding',
-    body: 'Students build real websites, dashboards, and app prototypes—writing code that ships to actual community partners.',
+    body: 'Building websites and small apps, starting from zero if that’s where you are.',
     icon: <CodingIcon />,
   },
   {
     title: 'AI & Technology',
-    body: 'From AI-powered tools to data visualizations, students use technology as a medium to solve meaningful problems.',
+    body: 'How to use AI tools and other tech in your own projects, and how to tell when they’re wrong.',
     icon: <AiIcon />,
   },
   {
     title: 'Entrepreneurship',
-    body: 'Students learn to identify problems, validate ideas, research customers, and pitch solutions within real constraints.',
+    body: 'Coming up with a business idea, finding out if anyone actually wants it, and pitching it.',
     icon: <EntrepreneurshipIcon />,
   },
   {
-    title: 'Community Impact',
-    body: 'Every project serves a local business, nonprofit, or school—turning lessons into measurable value for real people.',
+    title: 'Community Projects',
+    body: 'When we can, projects are for a local business, nonprofit, or school, so the work gets used.',
     icon: <CommunityIcon />,
   },
 ]
@@ -132,9 +132,9 @@ export default function ProgramsPreview() {
     <section className="bg-white px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <SectionEyebrow>What We Teach</SectionEyebrow>
+          <SectionEyebrow>What we teach</SectionEyebrow>
           <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-navy md:text-4xl">
-            Skills that turn students into builders.
+            What we work on at meetings.
           </h2>
         </div>
 

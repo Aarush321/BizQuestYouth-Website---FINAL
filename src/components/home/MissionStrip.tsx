@@ -17,13 +17,13 @@ export default function MissionStrip() {
         }}
       >
         <h2 className="font-display text-2xl font-semibold leading-[1.15] text-navy md:text-4xl">
-          To empower the next generation of innovators by providing
-          underserved students with the technical, entrepreneurial, and
-          leadership skills needed to solve real community problems.
+          We want students in underserved communities to learn tech and
+          business skills, and to use them on problems in their own
+          neighborhoods.
         </h2>
         <p className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-slate">
-          Because students learn best by building real solutions for real
-          people.
+          Honestly, you learn way more building something for someone than
+          you do from a worksheet.
         </p>
       </div>
     </section>

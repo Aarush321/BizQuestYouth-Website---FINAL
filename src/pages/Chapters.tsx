@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import ChaptersIntro from '../components/chapters/ChaptersIntro'
 import ChapterList from '../components/chapters/ChapterList'
+import ReachSection from '../components/chapters/ReachSection'
 import StartChapterCta from '../components/chapters/StartChapterCta'
 
 // The map pulls in react-simple-maps/d3-geo/topojson — keep it out of the
@@ -23,6 +24,7 @@ export default function Chapters() {
         <WorldMap />
       </Suspense>
       <ChapterList />
+      <ReachSection />
       <StartChapterCta />
     </div>
   )

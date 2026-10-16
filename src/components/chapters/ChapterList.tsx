@@ -20,9 +20,9 @@ export default function ChapterList() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <SectionEyebrow>Full List</SectionEyebrow>
+            <SectionEyebrow>Full list</SectionEyebrow>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-4xl">
-              Every Chapter
+              All chapters
             </h2>
           </div>
 
@@ -59,7 +59,7 @@ export default function ChapterList() {
                   </p>
                   {chapter.studentCount ? (
                     <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.08em] text-gold">
-                      {chapter.studentCount} students
+                      {chapter.studentCount} members
                     </p>
                   ) : null}
                 </article>

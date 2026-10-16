@@ -5,11 +5,11 @@ export default function CtaBanner() {
     <section className="w-full bg-gold px-5 py-20 md:py-24">
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <h2 className="font-display text-3xl font-bold leading-tight text-navy md:text-[2.75rem]">
-          Bring BizQuest to Your School
+          Want BizQuest at your school?
         </h2>
         <p className="mt-4 max-w-xl font-body text-base leading-relaxed text-navy/80 md:text-lg">
-          Start a chapter and give your students the chance to build real
-          solutions for their community.
+          Start a chapter. We&rsquo;ll help you set it up and plan your first
+          few meetings.
         </p>
         <Link
           to="/chapters"

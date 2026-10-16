@@ -24,14 +24,13 @@ export default function Hero() {
             <SectionEyebrow>Student-led</SectionEyebrow>
 
             <h1 className="mt-4 font-display text-[2.1rem] font-bold leading-[1.08] text-navy sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem]">
-              Empowering students to become innovators,
-              problem-solvers, and future entrepreneurs.
+              Students teaching students how to build things.
             </h1>
 
             <p className="mt-6 max-w-[500px] font-body text-base leading-relaxed text-slate md:text-xl md:leading-relaxed">
-              BizQuest teaches technology, business, and AI through real
-              community projects—so students build solutions that matter,
-              not just skills on paper.
+              BizQuest is a student-run nonprofit. Our chapters meet to learn
+              coding, business, and AI, then use what they learn on projects
+              for people in their own neighborhoods.
             </p>
 
             <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">

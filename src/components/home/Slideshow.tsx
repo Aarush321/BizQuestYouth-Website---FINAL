@@ -1,19 +1,25 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { prefersReducedMotion } from '../../hooks/useInView'
+import SectionEyebrow from '../ui/SectionEyebrow'
+import meeting1 from '../../assets/slideshow/meeting-1.jpg'
+import meeting2 from '../../assets/slideshow/meeting-2.jpg'
+import meeting3 from '../../assets/slideshow/meeting-3.jpg'
+import meeting4 from '../../assets/slideshow/meeting-4.jpg'
+import meeting5 from '../../assets/slideshow/meeting-5.jpg'
+import meeting6 from '../../assets/slideshow/meeting-6.jpg'
 
 type Slide = {
-  imageUrl: string | null
-  caption: string
+  imageUrl: string
+  alt: string
 }
 
-// Placeholder slides — swap in real imageUrls later without changing layout logic.
 const SLIDES: Slide[] = [
-  { imageUrl: null, caption: 'Students sketching solutions at Memphis Chapter' },
-  { imageUrl: null, caption: 'Pitch night — teams presenting to local mentors' },
-  { imageUrl: null, caption: 'Coding workshop in progress' },
-  { imageUrl: null, caption: 'Community partners touring student projects' },
-  { imageUrl: null, caption: 'Chapter lead training weekend' },
-  { imageUrl: null, caption: 'Demo day celebration' },
+  { imageUrl: meeting1, alt: 'A full library of students at a BizQuest chapter meeting' },
+  { imageUrl: meeting2, alt: 'A student presenting a business idea to the chapter' },
+  { imageUrl: meeting3, alt: 'Students gathered around tables during a meeting' },
+  { imageUrl: meeting4, alt: 'Student leaders speaking to the room' },
+  { imageUrl: meeting5, alt: 'Students talking and working on laptops before a meeting' },
+  { imageUrl: meeting6, alt: 'Students listening during a BizQuest session' },
 ]
 
 const AUTO_MS = 5000
@@ -99,113 +105,106 @@ export default function Slideshow() {
   useEffect(() => () => clearResume(), [clearResume])
 
   return (
-    <section
-      className="group/slideshow relative h-[45vh] w-full overflow-hidden bg-slate/10 md:h-[65vh]"
-      aria-roledescription="carousel"
-      aria-label="BizQuest moments"
-      onMouseEnter={pause}
-      onMouseLeave={() => {
-        if (!reduceMotion) scheduleResume()
-      }}
-      onTouchStart={pause}
-      onTouchEnd={() => {
-        if (!reduceMotion) scheduleResume()
-      }}
-    >
-      {/* Slides — stacked, crossfade via opacity */}
-      <div className="absolute inset-0">
-        {SLIDES.map((slide, i) => {
-          const isActive = i === index
-          return (
-            <div
-              key={slide.caption}
-              className="absolute inset-0 transition-opacity ease-out"
-              style={{
-                opacity: isActive ? 1 : 0,
-                transitionDuration: reduceMotion ? '0ms' : `${FADE_MS}ms`,
-                pointerEvents: isActive ? 'auto' : 'none',
-              }}
-              aria-hidden={!isActive}
-            >
-              {slide.imageUrl ? (
-                <img
-                  src={slide.imageUrl}
-                  alt={slide.caption}
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center bg-slate/15">
-                  <span className="font-mono text-sm uppercase tracking-[0.14em] text-slate">
-                    [photo {i + 1}]
-                  </span>
-                </div>
-              )}
-            </div>
-          )
-        })}
-      </div>
-
-      {/* Screen reader announcement */}
-      <div className="sr-only" aria-live="polite" aria-atomic="true">
-        Slide {index + 1} of {count}: {active.caption}
-      </div>
-
-      {/* Caption */}
-      {active.caption ? (
-        <div className="pointer-events-none absolute bottom-14 left-0 z-10 max-w-[min(90%,28rem)] bg-navy/75 px-4 py-2.5 md:bottom-16 md:left-0 md:max-w-md md:px-5">
-          <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-white/90 md:text-xs">
-            {active.caption}
-          </p>
+    <section className="relative overflow-hidden bg-[#e5f0f8] px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto max-w-5xl">
+        <div className="text-center">
+          <div className="flex justify-center">
+            <SectionEyebrow>Life at BizQuest</SectionEyebrow>
+          </div>
+          <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-4xl">
+            A few photos from our meetings.
+          </h2>
         </div>
-      ) : null}
 
-      {/* Arrows — always subtle on mobile; fade in on desktop hover */}
-      <button
-        type="button"
-        onClick={prev}
-        aria-label="Previous slide"
-        className="absolute top-1/2 left-3 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-navy shadow-[0_2px_8px_rgba(27,42,74,0.12)] transition-[opacity,background-color] duration-200 hover:bg-white focus-visible:opacity-100 md:left-5 md:opacity-0 md:group-hover/slideshow:opacity-100"
-      >
-        <ChevronLeft />
-      </button>
-      <button
-        type="button"
-        onClick={next}
-        aria-label="Next slide"
-        className="absolute top-1/2 right-3 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-navy shadow-[0_2px_8px_rgba(27,42,74,0.12)] transition-[opacity,background-color] duration-200 hover:bg-white focus-visible:opacity-100 md:right-5 md:opacity-0 md:group-hover/slideshow:opacity-100"
-      >
-        <ChevronRight />
-      </button>
+        <div className="relative mt-10 md:-rotate-1">
+          <span className="slideshow-tape left-8 -rotate-6" aria-hidden />
+          <span className="slideshow-tape right-8 rotate-6" aria-hidden />
 
-      {/* Dots */}
-      <div
-        className="absolute inset-x-0 bottom-4 z-20 flex items-center justify-center gap-1 md:bottom-5"
-        role="tablist"
-        aria-label="Slide indicators"
-      >
-        {SLIDES.map((slide, i) => {
-          const isActive = i === index
-          return (
-            <button
-              key={slide.caption}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              aria-label={`Go to slide ${i + 1}: ${slide.caption}`}
-              onClick={() => goTo(i)}
-              className="flex h-10 w-10 items-center justify-center rounded-full"
+          <div className="rounded-2xl bg-white p-2.5 shadow-[0_18px_40px_rgba(27,42,74,0.18)] md:p-4">
+            <div
+              className="group/slideshow relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate/10 md:aspect-[16/10]"
+              aria-roledescription="carousel"
+              aria-label="BizQuest moments"
+              onMouseEnter={pause}
+              onMouseLeave={() => {
+                if (!reduceMotion) scheduleResume()
+              }}
+              onTouchStart={pause}
+              onTouchEnd={() => {
+                if (!reduceMotion) scheduleResume()
+              }}
             >
-              <span
-                className={
-                  isActive
-                    ? 'block h-2.5 w-2.5 rounded-full bg-gold'
-                    : 'block h-2.5 w-2.5 rounded-full border-[1.5px] border-gold/55 bg-transparent'
-                }
-                aria-hidden
-              />
-            </button>
-          )
-        })}
+              {SLIDES.map((slide, i) => {
+                const isActive = i === index
+                return (
+                  <img
+                    key={slide.imageUrl}
+                    src={slide.imageUrl}
+                    alt={slide.alt}
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    className="absolute inset-0 h-full w-full object-cover transition-opacity ease-out"
+                    style={{
+                      opacity: isActive ? 1 : 0,
+                      transitionDuration: reduceMotion ? '0ms' : `${FADE_MS}ms`,
+                    }}
+                    aria-hidden={!isActive}
+                  />
+                )
+              })}
+
+              <div className="sr-only" aria-live="polite" aria-atomic="true">
+                Slide {index + 1} of {count}: {active.alt}
+              </div>
+
+              <button
+                type="button"
+                onClick={prev}
+                aria-label="Previous slide"
+                className="absolute top-1/2 left-3 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-navy shadow-[0_2px_8px_rgba(27,42,74,0.12)] transition-[opacity,background-color] duration-200 hover:bg-white focus-visible:opacity-100 md:left-5 md:opacity-0 md:group-hover/slideshow:opacity-100"
+              >
+                <ChevronLeft />
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                aria-label="Next slide"
+                className="absolute top-1/2 right-3 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-navy shadow-[0_2px_8px_rgba(27,42,74,0.12)] transition-[opacity,background-color] duration-200 hover:bg-white focus-visible:opacity-100 md:right-5 md:opacity-0 md:group-hover/slideshow:opacity-100"
+              >
+                <ChevronRight />
+              </button>
+            </div>
+
+            <div
+              className="mt-2 flex items-center justify-center gap-1 md:mt-3"
+              role="tablist"
+              aria-label="Slide indicators"
+            >
+              {SLIDES.map((slide, i) => {
+                const isActive = i === index
+                return (
+                  <button
+                    key={slide.imageUrl}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-label={`Go to slide ${i + 1}`}
+                    onClick={() => goTo(i)}
+                    className="flex h-8 w-8 items-center justify-center rounded-full"
+                  >
+                    <span
+                      className={
+                        isActive
+                          ? 'block h-2.5 w-2.5 rounded-full bg-gold'
+                          : 'block h-2.5 w-2.5 rounded-full border-[1.5px] border-gold/55 bg-transparent'
+                      }
+                      aria-hidden
+                    />
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -11,30 +11,30 @@ type PostIt = {
 
 const POSTITS: PostIt[] = [
   {
-    tag: '01 / Mission',
-    title: 'Collaborate with local business',
-    body: 'Student teams partner with real businesses — building websites, tools, and tech solutions that actually get used.',
+    tag: '01',
+    title: 'Work with local businesses',
+    body: 'Student teams help local businesses with things like websites and simple tech tools.',
     variant: 'gold',
     tilt: 'left',
   },
   {
-    tag: '02 / Impact',
-    title: 'Lift underserved businesses',
-    body: 'We raise funds and volunteer hours to help small, under-resourced businesses get the digital presence and tools they need.',
+    tag: '02',
+    title: 'Help small businesses',
+    body: 'We raise money and put in volunteer hours for small businesses that can’t afford to pay for tech help.',
     variant: 'blue',
     tilt: 'right',
   },
   {
-    tag: '03 / Access',
-    title: 'Fund IT for underserved people',
-    body: 'Donations and sponsorships go toward laptops, software, AI tools, and training — so more students can break into tech.',
+    tag: '03',
+    title: 'Pay for tech access',
+    body: 'Donations buy laptops, software, and AI tools for students who don’t have them.',
     variant: 'pink',
     tilt: 'right',
   },
   {
-    tag: '04 / Together',
-    title: 'Real projects, real community',
-    body: 'Every partnership is hands-on: students learn by doing, businesses get help, and communities see change they can feel.',
+    tag: '04',
+    title: 'Learn by doing',
+    body: 'Students pick up more from one project for an actual business than from a whole unit of slides.',
     variant: 'navy',
     tilt: 'left',
   },
@@ -110,15 +110,13 @@ export default function MissionBoard() {
     <section className="bg-slate/[0.04] px-5 py-16 md:px-8 md:py-24">
       <div ref={ref} className="mx-auto max-w-6xl">
         <p className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-teal">
-          What we stand for
+          What we do
         </p>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-navy md:text-4xl">
           Our mission, pinned up.
         </h2>
         <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-slate">
-          BizQuest brings students, donors, and local partners together — raising
-          money and building projects that open doors for underserved businesses
-          and people in IT.
+          Here&rsquo;s what donations and partnerships go toward.
         </p>
 
         <div className="post-it-board mt-12 rounded-2xl p-6 md:p-10">

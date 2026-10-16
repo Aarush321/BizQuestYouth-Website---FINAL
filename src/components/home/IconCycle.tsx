@@ -79,11 +79,7 @@ export default function IconCycle() {
     <div
       className="relative h-full w-full"
       role="img"
-      aria-label={
-        reduceMotion
-          ? `${active.label} — BizQuest learning journey`
-          : `BizQuest learning journey: ${active.label}`
-      }
+      aria-label={`What we teach: ${active.label}`}
     >
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         {active.label}

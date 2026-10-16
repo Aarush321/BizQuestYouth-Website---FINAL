@@ -10,7 +10,7 @@ type Stat = {
 
 // Placeholder targets — swap in real numbers later without touching layout
 const STATS: Stat[] = [
-  { value: 500, suffix: '+', label: 'Students Reached' },
+  { value: 500, suffix: '+', label: 'Members' },
   { value: 5000, prefix: '$', suffix: '+', label: 'Dollars Raised' },
   { value: 4, label: 'Chapters' },
 ]

@@ -2,32 +2,31 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const DEFAULT_DESCRIPTION =
-  'BizQuest empowers underserved middle school students with AI, technology, and entrepreneurship skills through real community projects.'
+  'BizQuest is a student-run nonprofit that teaches coding, business, and AI, with chapters in Tennessee, New Jersey, and Delhi, India.'
 
 const META: Record<string, { title: string; description: string }> = {
   '/': {
-    title: 'BizQuest — Empowering Young Innovators through AI',
+    title: 'BizQuest',
     description: DEFAULT_DESCRIPTION,
   },
   '/fundraise': {
-    title: 'Reach Out to Support — BizQuest',
+    title: 'Support Us | BizQuest',
     description:
-      'Partner with BizQuest to collaborate with local businesses, support underserved entrepreneurs, and fund IT access for underserved students and communities.',
+      'Ways to help BizQuest: donate, sponsor a project, mentor students, or work with us as a local business.',
   },
   '/chapters': {
-    title: 'Chapters — BizQuest',
+    title: 'Chapters | BizQuest',
     description:
-      'Find a BizQuest chapter near you, browse our network across the country, or start a chapter in your community.',
+      'See where BizQuest chapters meet and how to start one in your area.',
   },
   '/leadership': {
-    title: 'Leadership — BizQuest',
-    description:
-      'Meet the students and mentors leading BizQuest chapters and driving community-powered innovation.',
+    title: 'Leadership | BizQuest',
+    description: 'Meet the students who run BizQuest.',
   },
   '/connect': {
-    title: 'Connect — BizQuest',
+    title: 'Connect | BizQuest',
     description:
-      'Get in touch with BizQuest — join schools as a student, donate, partner as an organization, or start a new chapter.',
+      'Contact BizQuest about joining, donating, partnering, or starting a chapter.',
   },
 }
 

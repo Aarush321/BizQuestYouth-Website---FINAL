@@ -5,11 +5,10 @@ export default function StartChapterCta() {
     <section className="w-full bg-navy px-5 py-20 md:py-24">
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <h2 className="font-display text-3xl font-bold leading-tight text-white md:text-[2.75rem]">
-          Don&rsquo;t See Your City? Start a Chapter
+          Don&rsquo;t see your city? Start a chapter.
         </h2>
         <p className="mt-4 max-w-xl font-body text-base leading-relaxed text-white/75 md:text-lg">
-          Bring the BizQuest curriculum to your community — we&rsquo;ll help you
-          get a chapter up and running.
+          Send us a message and we&rsquo;ll help you get it going.
         </p>
         <Link
           to="/connect"
