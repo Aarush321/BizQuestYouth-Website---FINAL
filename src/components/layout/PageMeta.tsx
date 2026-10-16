@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
+const SITE_URL = 'https://bizquestyouth.org'
+
 const DEFAULT_DESCRIPTION =
   'BizQuest is a student-run nonprofit that teaches coding, business, and AI, with chapters in Tennessee, New Jersey, and Delhi, India.'
 
@@ -21,7 +23,8 @@ const META: Record<string, { title: string; description: string }> = {
   },
   '/leadership': {
     title: 'Leadership | BizQuest',
-    description: 'Meet the students who run BizQuest.',
+    description:
+      'BizQuest is run by Aarush Ravichandran (CEO), Uthej Katikaneni (CFO), Kushagra Dixit (COO), Navneeth Manoj (Chief Growth Officer), Avaneesh Chandran (CMO), and Shreyan Seth (CTO).',
   },
   '/connect': {
     title: 'Connect | BizQuest',
@@ -49,7 +52,17 @@ export default function PageMeta() {
       document.head.appendChild(descriptionTag)
     }
     descriptionTag.setAttribute('content', meta.description)
-  }, [meta.title, meta.description])
+
+    let canonicalTag = document.querySelector<HTMLLinkElement>(
+      'link[rel="canonical"]',
+    )
+    if (!canonicalTag) {
+      canonicalTag = document.createElement('link')
+      canonicalTag.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonicalTag)
+    }
+    canonicalTag.setAttribute('href', `${SITE_URL}${pathname}`)
+  }, [meta.title, meta.description, pathname])
 
   return null
 }

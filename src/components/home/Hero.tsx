@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 py-28 md:px-8 lg:py-24">
         <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-10">
           <div className="relative z-10 max-w-xl">
-            <SectionEyebrow>Student-led</SectionEyebrow>
+            <SectionEyebrow>Student-run since April 2025</SectionEyebrow>
 
             <h1 className="mt-4 font-display text-[2.1rem] font-bold leading-[1.08] text-navy sm:text-5xl lg:text-[3.25rem] xl:text-[3.75rem]">
               Students teaching students how to build things.

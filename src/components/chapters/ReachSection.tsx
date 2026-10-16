@@ -1,17 +1,6 @@
 import SectionEyebrow from '../ui/SectionEyebrow'
 
-const STATES = [
-  'Tennessee',
-  'California',
-  'Alabama',
-  'Texas',
-  'North Carolina',
-  'New Jersey',
-  'South Carolina',
-  'Mississippi',
-  'Florida',
-  'Georgia',
-] as const
+const STATES = ['Tennessee', 'Georgia', 'Mississippi', 'Texas'] as const
 
 const METHODS = [
   {

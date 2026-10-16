@@ -36,7 +36,7 @@ const LEADERS: Leader[] = [
   },
   {
     name: 'Navneeth Manoj',
-    title: 'Chief Information Officer',
+    title: 'Chief Growth Officer',
     imageUrl: navneethImg,
     imagePosition: 'center 28%',
   },

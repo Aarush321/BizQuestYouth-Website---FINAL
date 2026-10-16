@@ -26,6 +26,7 @@ export default function Footer() {
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-white/70">
               A student-run nonprofit teaching coding, business, and AI.
+              Started in April 2025.
             </p>
           </div>
 
